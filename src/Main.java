@@ -5,7 +5,7 @@ public class Main {
                 Scanner skaner = new Scanner(System.in);
 
 
-                System.out.println(" Podaj  przedramię, ramię, odległość nadgarstek-bark:");
+                System.out.println("Podaj przedramię, ramię, odległość nadgarstek-bark:");
                 double lokiecA = skaner.nextDouble();
                 double lokiecB = skaner.nextDouble();
                 double lokiecC = skaner.nextDouble();
@@ -15,7 +15,7 @@ public class Main {
 
                 System.out.println( Math.round(katLokcia));
                 if (katLokcia >= 90 && katLokcia <= 120) {
-                    System.out.println(" w normie");
+                    System.out.println("w normie");
                 } else {
                     System.out.println("Poza normą");
                 }
@@ -36,7 +36,7 @@ public class Main {
                     System.out.println("Poza normą");
                 }
 
-                System.out.println(" Podaj udo, łydka, odległość biodro-kostka:");
+                System.out.println("Podaj udo, łydka, odległość biodro-kostka:");
                 double kolanoA = skaner.nextDouble();
                 double kolanoB = skaner.nextDouble();
                 double kolanoC = skaner.nextDouble();
@@ -46,17 +46,9 @@ public class Main {
 
                 System.out.println(Math.round(katKolana));
                 if (katKolana >= 90 && katKolana <= 110) {
-                    System.out.println("-> Wynik w normie");
+                    System.out.println("Wynik w normie");
                 } else {
-                    System.out.println("-> Poza normą");
+                    System.out.println("Poza normą");
                 }
-
-                skaner.close();
-
-
-
-
-
-
     }
 }
