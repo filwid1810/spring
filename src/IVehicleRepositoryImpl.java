@@ -46,7 +46,7 @@ public class IVehicleRepositoryImpl implements IVehicleRepository {
             vehicles.add(cur);
             }
             else if(type.equals("CAR")){
-                cur = new Car(split[1],split[2],split[3])
+               // cur = new Car(split[1],split[2],split[3])
             }
             scannerf.close();
         }catch(FileNotFoundException e){
