@@ -6,14 +6,16 @@ public abstract class Vehicle {
     private double price;
     private  boolean rented;
 
-    public Vehicle(String brand, String model, int year, double price, boolean rented, String id) {
+
+    public abstract Vehicle copy();
+
+    public Vehicle(String id, String brand, String model, int year, double price, boolean rented) {
         this.id = id;
         this.brand = brand;
         this.model = model;
         this.year = year;
         this.price = price;
         this.rented = rented;
-
     }
 
     String toCSV(String id, String brand, String model, int year, double price, boolean rented) {
@@ -23,37 +25,25 @@ public abstract class Vehicle {
     @Override
     public String toString() {
         return "Vehicle{" +
+                ", id=" + id +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 ", price=" + price +
                 ", rented=" + rented +
-                ", id=" + id +
                 '}';
     }
 
-    public boolean isRented() {
-        return rented;
+    public String getId() {
+        return id;
     }
 
-    public void setRented(boolean rented) {
-        this.rented = rented;
+    public String getBrand() {
+        return brand;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getModel() {
@@ -64,11 +54,27 @@ public abstract class Vehicle {
         this.model = model;
     }
 
-    public String getBrand() {
-        return brand;
+    public int getYear() {
+        return year;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public boolean isRented() {
+        return rented;
+    }
+
+    public void setRented(boolean rented) {
+        this.rented = rented;
     }
 }
